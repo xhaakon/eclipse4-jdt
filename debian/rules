@@ -10,7 +10,7 @@ override_dh_auto_build-indep:
 	jh_generateorbitdir
 	dh_auto_build -i
 
-	build_bundle releng/org.eclipse.cdt
+	build_bundle org.eclipse.jdt.core
 
 override_dh_clean:
 	dh_clean
