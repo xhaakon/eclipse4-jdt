@@ -1,0 +1,4 @@
+version=3
+opts=dversionmangle=s/\+dfsg\d?// \
+http://git.eclipse.org/c/jdt/eclipse.jdt.core.git/refs/ \
+.*/snapshot/R(\d+)_(\d+)(?:_(\d+))?.tar.xz

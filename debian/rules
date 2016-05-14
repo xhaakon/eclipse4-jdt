@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+
+export JAVA_HOME:=/usr/lib/jvm/default-java
+#export JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF-8"
+
+%:
+	dh $@
+
+override_dh_auto_build-indep:
+	jh_generateorbitdir
+	dh_auto_build -i
+
+	build_bundle releng/org.eclipse.cdt
+
+override_dh_clean:
+	dh_clean
+	jh_clean
+
+VERSION=$(shell dpkg-parsechangelog -S Version | cut -d- -f1)
+get-orig-source:
+	uscan --force-download --download-version $(VERSION)

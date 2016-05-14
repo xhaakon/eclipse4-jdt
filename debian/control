@@ -1,0 +1,22 @@
+Source: eclipse4-jdt
+Section: devel
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders: Jakub Adam <jakub.adam@ktknet.cz>
+Build-Depends: debhelper (>= 9.20120608~),
+  default-jdk,
+  dpkg-dev,
+  eclipse4-build-helper,
+  eclipse4-platform
+Standards-Version: 3.9.6
+Vcs-Git: git://anonscm.debian.org/pkg-java/eclipse4-jdt.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-java/eclipse4-jdt.git
+Homepage: http://www.eclipse.org/cdt/
+
+Package: eclipse4-jdt
+Architecture: all
+Depends: eclipse4-platform,
+         ${misc:Depends},
+         ${orbit:Depends}
+Description: Java development plugin for Eclipse IDE
+ TODO TODO
